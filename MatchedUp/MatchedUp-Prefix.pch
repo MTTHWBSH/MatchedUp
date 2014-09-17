@@ -1,0 +1,14 @@
+//
+//  MatchedUp-Prefix.pch
+//  MatchedUp
+//
+//  Created by Matt Bush on 9/16/14.
+//  Copyright (c) 2014 Matt Bush. All rights reserved.
+//
+
+#ifndef MatchedUp_MatchedUp_Prefix_pch
+#define MatchedUp_MatchedUp_Prefix_pch
+
+    #import <Parse/Parse.h>
+
+#endif
