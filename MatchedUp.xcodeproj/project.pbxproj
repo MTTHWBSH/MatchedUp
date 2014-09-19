@@ -16,7 +16,7 @@
 		4D85993019C8F13300FCF80D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992E19C8F13300FCF80D /* LaunchScreen.xib */; };
 		4D85993C19C8F13300FCF80D /* MatchedUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85993B19C8F13300FCF80D /* MatchedUpTests.m */; };
 		4D85994719C8F1CB00FCF80D /* CCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85994619C8F1CB00FCF80D /* CCLoginViewController.m */; };
-		F925FF7A68434C888A4F1432 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
+		76CF2C2319CBC7C300AEC375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,7 @@
 		4D85994519C8F1CB00FCF80D /* CCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLoginViewController.h; sourceTree = "<group>"; };
 		4D85994619C8F1CB00FCF80D /* CCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLoginViewController.m; sourceTree = "<group>"; };
 		4D85994919C8F4F000FCF80D /* MatchedUp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MatchedUp-Prefix.pch"; sourceTree = "<group>"; };
+		76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AB6F97FDEA7140158AE39458 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F925FF7A68434C888A4F1432 /* libPods.a in Frameworks */,
+				76CF2C2319CBC7C300AEC375 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +149,7 @@
 		6658B86147664848ADC8B62D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */,
 				AB6F97FDEA7140158AE39458 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -204,6 +206,7 @@
 				TargetAttributes = {
 					4D85991819C8F13300FCF80D = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = M9V9M99M8Q;
 					};
 					4D85993419C8F13300FCF80D = {
 						CreatedOnToolsVersion = 6.0;
@@ -415,6 +418,11 @@
 			baseConfigurationReference = 7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MatchedUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +434,11 @@
 			baseConfigurationReference = 7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MatchedUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

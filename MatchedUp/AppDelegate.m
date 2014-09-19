@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
 
@@ -21,6 +22,14 @@
     [Parse setApplicationId:@"3XRZzSTFgs2msmiLoH9PqI83Y40hpO5dBBdSiYoi"
                   clientKey:@"m21nETsk4clUiopZUnKg4yDdzRzeD2Jtdj6LncYv"];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
