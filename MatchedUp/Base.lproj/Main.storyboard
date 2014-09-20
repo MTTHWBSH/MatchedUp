@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yiJ-tU-FEB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -116,10 +117,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bSn-G7-08b">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <rect key="frame" x="157" y="288" width="20" height="20"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYE-17-IZS">
-                                <rect key="frame" x="229" y="524" width="143" height="30"/>
+                                <rect key="frame" x="96" y="522" width="143" height="30"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,6 +130,38 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bSn-G7-08b" firstAttribute="leading" secondItem="z6d-Pv-tGJ" secondAttribute="leadingMargin" constant="174" id="3si-wa-JD6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oYE-17-IZS" secondAttribute="trailing" constant="112" id="9lv-Id-TfC">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="oYE-17-IZS" firstAttribute="leading" secondItem="z6d-Pv-tGJ" secondAttribute="leadingMargin" constant="113" id="Chv-gR-BQG">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="bSn-G7-08b" secondAttribute="trailing" constant="174" id="YZe-fT-JAx"/>
+                            <constraint firstItem="nBQ-xX-zsL" firstAttribute="top" secondItem="oYE-17-IZS" secondAttribute="bottom" constant="48" id="ZDO-a2-MK5"/>
+                            <constraint firstItem="oYE-17-IZS" firstAttribute="top" secondItem="bSn-G7-08b" secondAttribute="bottom" constant="214" id="k4F-IY-g4N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3si-wa-JD6"/>
+                                <exclude reference="YZe-fT-JAx"/>
+                                <exclude reference="9lv-Id-TfC"/>
+                                <exclude reference="Chv-gR-BQG"/>
+                                <exclude reference="k4F-IY-g4N"/>
+                                <exclude reference="ZDO-a2-MK5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="3si-wa-JD6"/>
+                                <include reference="YZe-fT-JAx"/>
+                                <include reference="9lv-Id-TfC"/>
+                                <include reference="Chv-gR-BQG"/>
+                                <include reference="k4F-IY-g4N"/>
+                                <include reference="ZDO-a2-MK5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="yaR-vK-oul"/>
                     <connections>

@@ -11,12 +11,12 @@
 		4D85992219C8F13300FCF80D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85992119C8F13300FCF80D /* AppDelegate.m */; };
 		4D85992519C8F13300FCF80D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85992419C8F13300FCF80D /* FirstViewController.m */; };
 		4D85992819C8F13300FCF80D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85992719C8F13300FCF80D /* SecondViewController.m */; };
-		4D85992B19C8F13300FCF80D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992919C8F13300FCF80D /* Main.storyboard */; };
 		4D85992D19C8F13300FCF80D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992C19C8F13300FCF80D /* Images.xcassets */; };
-		4D85993019C8F13300FCF80D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992E19C8F13300FCF80D /* LaunchScreen.xib */; };
 		4D85993C19C8F13300FCF80D /* MatchedUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85993B19C8F13300FCF80D /* MatchedUpTests.m */; };
 		4D85994719C8F1CB00FCF80D /* CCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85994619C8F1CB00FCF80D /* CCLoginViewController.m */; };
-		76CF2C2319CBC7C300AEC375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */; };
+		76A03CB719CD29DF00EEEE55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
+		76A03CB819CD2E7300EEEE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992919C8F13300FCF80D /* Main.storyboard */; };
+		C75CD3DFDFEA4AC48791A04F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		4D85994519C8F1CB00FCF80D /* CCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLoginViewController.h; sourceTree = "<group>"; };
 		4D85994619C8F1CB00FCF80D /* CCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLoginViewController.m; sourceTree = "<group>"; };
 		4D85994919C8F4F000FCF80D /* MatchedUp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MatchedUp-Prefix.pch"; sourceTree = "<group>"; };
-		76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AB6F97FDEA7140158AE39458 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76CF2C2319CBC7C300AEC375 /* FacebookSDK.framework in Frameworks */,
+				C75CD3DFDFEA4AC48791A04F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A03CB719CD29DF00EEEE55 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +149,6 @@
 		6658B86147664848ADC8B62D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				76CF2C2219CBC7C300AEC375 /* FacebookSDK.framework */,
 				AB6F97FDEA7140158AE39458 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -238,8 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D85992B19C8F13300FCF80D /* Main.storyboard in Resources */,
-				4D85993019C8F13300FCF80D /* LaunchScreen.xib in Resources */,
+				76A03CB819CD2E7300EEEE55 /* Main.storyboard in Resources */,
 				4D85992D19C8F13300FCF80D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -433,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (

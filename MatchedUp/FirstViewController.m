@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 
 @interface FirstViewController ()

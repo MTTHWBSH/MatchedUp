@@ -2,16 +2,15 @@ PODS:
   - Bolts (1.1.2)
   - Facebook-iOS-SDK (3.18.0):
     - Bolts
-  - Parse (1.4.0):
-    - Bolts (~> 1.1.2)
+  - Parse (1.2.16):
+    - Facebook-iOS-SDK (~> 3.9)
 
 DEPENDENCIES:
-  - Facebook-iOS-SDK
-  - Parse
+  - Parse (= 1.2.16)
 
 SPEC CHECKSUMS:
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: fa12c51cc57bfb6f92e47793c9d4d2c65bc92741
-  Parse: 217a57ed13e870a744fe746fcc01a3fef6a9b750
+  Parse: 995287c5b09dffb27d745fe8aa8df6e933afbedd
 
 COCOAPODS: 0.33.1
