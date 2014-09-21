@@ -15,6 +15,8 @@
 		76A03CB719CD29DF00EEEE55 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
 		76A03CB819CD2E7300EEEE55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992919C8F13300FCF80D /* Main.storyboard */; };
 		76A03CBB19CE2E8E00EEEE55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A03CBA19CE2E8E00EEEE55 /* Constants.m */; };
+		76A03CBE19CF7F8E00EEEE55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A03CBD19CF7F8E00EEEE55 /* HomeViewController.m */; };
+		76A03CC319CF827B00EEEE55 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A03CC219CF827B00EEEE55 /* SettingsViewController.m */; };
 		C75CD3DFDFEA4AC48791A04F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,10 @@
 		4D85994919C8F4F000FCF80D /* MatchedUp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MatchedUp-Prefix.pch"; sourceTree = "<group>"; };
 		76A03CB919CE2E8E00EEEE55 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		76A03CBA19CE2E8E00EEEE55 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		76A03CBC19CF7F8E00EEEE55 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		76A03CBD19CF7F8E00EEEE55 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		76A03CC119CF827B00EEEE55 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		76A03CC219CF827B00EEEE55 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AB6F97FDEA7140158AE39458 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,7 +101,9 @@
 				4D85992019C8F13300FCF80D /* AppDelegate.h */,
 				4D85992119C8F13300FCF80D /* AppDelegate.m */,
 				4D85992919C8F13300FCF80D /* Main.storyboard */,
+				76A03CC019CF823300EEEE55 /* Settings */,
 				4D85994819C8F1D000FCF80D /* Login */,
+				76A03CBF19CF7F9800EEEE55 /* Home */,
 				4D85992C19C8F13300FCF80D /* Images.xcassets */,
 				4D85992E19C8F13300FCF80D /* LaunchScreen.xib */,
 				4D85991C19C8F13300FCF80D /* Supporting Files */,
@@ -147,6 +155,24 @@
 				AB6F97FDEA7140158AE39458 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76A03CBF19CF7F9800EEEE55 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				76A03CBC19CF7F8E00EEEE55 /* HomeViewController.h */,
+				76A03CBD19CF7F8E00EEEE55 /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		76A03CC019CF823300EEEE55 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				76A03CC119CF827B00EEEE55 /* SettingsViewController.h */,
+				76A03CC219CF827B00EEEE55 /* SettingsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +313,8 @@
 				4D85994719C8F1CB00FCF80D /* LoginViewController.m in Sources */,
 				4D85992219C8F13300FCF80D /* AppDelegate.m in Sources */,
 				4D85991F19C8F13300FCF80D /* main.m in Sources */,
+				76A03CC319CF827B00EEEE55 /* SettingsViewController.m in Sources */,
+				76A03CBE19CF7F8E00EEEE55 /* HomeViewController.m in Sources */,
 				76A03CBB19CE2E8E00EEEE55 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
