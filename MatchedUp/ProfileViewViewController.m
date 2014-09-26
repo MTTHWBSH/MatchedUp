@@ -22,12 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    PFFile *pictureFile = self.photo[kPhotoPictureKey];
+    [pictureFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        self.profilePictureImageView.image = [UIImage imageWithData:data];
+    }];
+    
+    PFUser *user = self.photo[kPhotoUserKey];
+    self.locationLabel.text = user[kUserProfileKey][kUserProfileLocationKey];
+    self.ageLabel.text = [NSString stringWithFormat:@"%@", user[kUserProfileKey][kUserProfileAgeKey]];
+    self.statusLabel.text = user[kUserProfileKey][kUserProfileRelationshipStatusKey];
+    self.tagLineLabel.text = user[kUserTagLineKey];
 }
 
 #pragma mark - IBActions

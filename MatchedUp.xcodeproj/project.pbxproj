@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0EC64D19D6115A006A2837 /* TestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EC64C19D6115A006A2837 /* TestUser.m */; };
 		4D85991F19C8F13300FCF80D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85991E19C8F13300FCF80D /* main.m */; };
 		4D85992219C8F13300FCF80D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D85992119C8F13300FCF80D /* AppDelegate.m */; };
 		4D85992D19C8F13300FCF80D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D85992C19C8F13300FCF80D /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0EC64B19D6115A006A2837 /* TestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUser.h; sourceTree = "<group>"; };
+		4D0EC64C19D6115A006A2837 /* TestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUser.m; sourceTree = "<group>"; };
 		4D85991919C8F13300FCF80D /* MatchedUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchedUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D85991D19C8F13300FCF80D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D85991E19C8F13300FCF80D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0EC64A19D6113C006A2837 /* CreateParseUser */ = {
+			isa = PBXGroup;
+			children = (
+				4D0EC64B19D6115A006A2837 /* TestUser.h */,
+				4D0EC64C19D6115A006A2837 /* TestUser.m */,
+			);
+			name = CreateParseUser;
+			sourceTree = "<group>";
+		};
 		4D85991019C8F13300FCF80D = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 				4D85992019C8F13300FCF80D /* AppDelegate.h */,
 				4D85992119C8F13300FCF80D /* AppDelegate.m */,
 				4D85992919C8F13300FCF80D /* Main.storyboard */,
+				4D0EC64A19D6113C006A2837 /* CreateParseUser */,
 				76A03CC819D094B900EEEE55 /* Profile */,
 				76A03CC419D0932500EEEE55 /* EditProfile */,
 				76A03CC019CF823300EEEE55 /* Settings */,
@@ -340,6 +353,7 @@
 				76A03CCB19D094D100EEEE55 /* ProfileViewViewController.m in Sources */,
 				4D85992219C8F13300FCF80D /* AppDelegate.m in Sources */,
 				76A03CC719D0935400EEEE55 /* EditProfileViewController.m in Sources */,
+				4D0EC64D19D6115A006A2837 /* TestUser.m in Sources */,
 				4D85991F19C8F13300FCF80D /* main.m in Sources */,
 				76A03CC319CF827B00EEEE55 /* SettingsViewController.m in Sources */,
 				76A03CBE19CF7F8E00EEEE55 /* HomeViewController.m in Sources */,
