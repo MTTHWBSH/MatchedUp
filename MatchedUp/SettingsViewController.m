@@ -49,10 +49,35 @@
 
 - (IBAction)logoutButtonPressed:(UIButton *)sender {
 
+    [PFUser logOut];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 - (IBAction)editProfileButtonPressed:(UIButton *)sender {
 
+}
+
+#pragma mark - Helper
+
+- (void)valueChanged:(id)sender
+{
+    if (sender == self.ageSlider) {
+        [[NSUserDefaults standardUserDefaults] setInteger:(int)self.ageSlider.value forKey:kAgeMaxKey];
+        self.ageLabel.text = [NSString stringWithFormat:@"%i", (int)self.ageSlider.value];
+    }
+    else if  (sender == self.menSwitch) {
+        [[NSUserDefaults standardUserDefaults] setBool:self.menSwitch.isOn forKey:kMenEnabledKey];
+    }
+    else if (sender == self.womenSwitch)    {
+        [[NSUserDefaults standardUserDefaults] setBool:self.womenSwitch.isOn forKey:kWomenEnabledKey];
+    }
+    else if (sender == self.singleSwitch)   {
+        [[NSUserDefaults standardUserDefaults] setBool:self.singleSwitch.isOn forKey:kSingleEnabledKey];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 @end
