@@ -8,21 +8,39 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-JSMessagesViewController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Pods-JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -42,7 +60,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>69BFDAD54E2B4730BFF8BF9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82B46AEF4A2545C495888517</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A45AFF7A06304206AF85A6E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC8B3C7E2BA24276916F63D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D34DAA60DE5748A4A211B421</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCDB9F9591E94EBEAD68BF11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5E5CAADFFCC4A9285428FC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

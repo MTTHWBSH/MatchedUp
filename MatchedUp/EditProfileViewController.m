@@ -10,17 +10,19 @@
 #import "Constants.h"
 #import <Parse/Parse.h>
 
-@interface EditProfileViewController ()
+@interface EditProfileViewController () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *tagLineTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePictureImageView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBarButtonItem;
 
 @end
 
 @implementation EditProfileViewController
 
 - (void)viewDidLoad {
+    
+    self.tagLineTextView.delegate = self;
+    
     [super viewDidLoad];
     
     PFQuery *query = [PFQuery queryWithClassName:kPhotoClassKey];
@@ -38,14 +40,20 @@
     self.tagLineTextView.text = [[PFUser currentUser] objectForKey:kUserTagLineKey];
 }
 
-#pragma mark - IBActions
+#pragma mark - TextView Delegate
 
-- (IBAction)saveBarButtonItemPressed:(UIBarButtonItem *)sender {
-
-    [[PFUser currentUser] setObject:self.tagLineTextView.text forKey:kUserTagLineKey];
-    [[PFUser currentUser] saveInBackground];
-    [self.navigationController popViewControllerAnimated:YES];
-    
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [self.tagLineTextView resignFirstResponder];
+        [[PFUser currentUser] setObject:self.tagLineTextView.text forKey:kUserTagLineKey];
+        [[PFUser currentUser] saveInBackground];
+        [self.navigationController popViewControllerAnimated:YES];
+        return NO;
+    }
+    else    {
+        return YES;
+    }
 }
 
 @end

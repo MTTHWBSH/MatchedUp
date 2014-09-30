@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) NSMutableData *imageData;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @end
 
@@ -25,6 +26,7 @@
     // Do any additional setup after loading the view.
     
     self.activityIndicator.hidden = YES;
+    self.logoImageView.image = [UIImage imageNamed:@"Logo"];
 }
 
 - (void)viewDidAppear:(BOOL)animated

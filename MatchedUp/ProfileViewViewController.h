@@ -10,8 +10,16 @@
 #import <Parse/Parse.h>
 #import "Constants.h"
 
+@protocol ProfileViewControllerDelegate <NSObject>
+
+- (void)didPressLike;
+- (void)didPressDislike;
+
+@end
+
 @interface ProfileViewViewController : UIViewController
 
 @property (strong, nonatomic) PFObject *photo;
+@property (weak, nonatomic) id <ProfileViewControllerDelegate> delegate;
 
 @end
