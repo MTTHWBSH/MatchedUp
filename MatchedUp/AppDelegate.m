@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <Mixpanel.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     [Parse setApplicationId:@"3XRZzSTFgs2msmiLoH9PqI83Y40hpO5dBBdSiYoi"
                   clientKey:@"m21nETsk4clUiopZUnKg4yDdzRzeD2Jtdj6LncYv"];
     [PFFacebookUtils initializeFacebook];
+    
+    [Mixpanel sharedInstanceWithToken:@"73c90c337c14d95b71a751662540a17d"];
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:12/255.0 green:158/255.0 blue: 255/255.0 alpha:1.0], NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0]}];

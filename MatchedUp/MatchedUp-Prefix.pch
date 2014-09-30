@@ -9,7 +9,9 @@
 #ifndef MatchedUp_MatchedUp_Prefix_pch
 #define MatchedUp_MatchedUp_Prefix_pch
 
-    #import <Parse/Parse.h>
-    #import "Constants.h"
+#import <Parse/Parse.h>
+#import "Constants.h"
+#import <Mixpanel.h>
 
+#define MIXPANEL_TOKEN @"73c90c337c14d95b71a751662540a17d"
 #endif

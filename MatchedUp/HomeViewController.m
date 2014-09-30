@@ -12,8 +12,10 @@
 #import "TestUser.h"
 #import "ProfileViewViewController.h"
 #import "MatchViewController.h"
+#import "TransitionAnimator.h"
+#import <Mixpanel.h>
 
-@interface HomeViewController () <MatchViewControllerDelegate, ProfileViewControllerDelegate>
+@interface HomeViewController () <MatchViewControllerDelegate, ProfileViewControllerDelegate, UIViewControllerTransitioningDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *chatBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsBarButtonItem;
@@ -102,11 +104,6 @@
         profileVC.photo = self.photo;
         profileVC.delegate = self;
     }
-    else if ([segue.identifier isEqualToString:@"homeToMatchSegue"])    {
-        MatchViewController *matchVC = segue.destinationViewController;
-        matchVC.matchedUserImage = self.photoImageView.image;
-        matchVC.delegate = self;
-    }
 }
 
 #pragma mark - IBActions
@@ -120,10 +117,24 @@
 }
 
 - (IBAction)likeButtonPressed:(UIButton *)sender {
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    
+    [mixpanel track:@"Like"];
+    
+    [mixpanel flush];
+    
     [self checkLike];
 }
 
 - (IBAction)dislikeButtonPressed:(UIButton *)sender {
+    
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    
+    [mixpanel track:@"Dislike"];
+    
+    [mixpanel flush];
+    
     [self checkDislike];
 }
 
@@ -316,7 +327,14 @@
             [chatroom setObject:[PFUser currentUser] forKey:kChatRoomUser1Key];
             [chatroom setObject:self.photo[kPhotoUserKey] forKey:kChatRoomUser2Key];
             [chatroom saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                [self performSegueWithIdentifier:@"homeToMatchSegue" sender:nil];
+                UIStoryboard *myStoryboard = self.storyboard;
+                MatchViewController *matchViewController = [myStoryboard instantiateViewControllerWithIdentifier:@"matchVC"];
+                matchViewController.view.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:.75];
+                matchViewController.transitioningDelegate = self;
+                matchViewController.matchedUserImage = self.photoImageView.image;
+                matchViewController.delegate = self;
+                matchViewController.modalPresentationStyle = UIModalPresentationCustom;
+                [self presentViewController:matchViewController animated:YES completion:nil];
             }];
         }
     }];
@@ -374,6 +392,21 @@
 {
     [self.navigationController popToRootViewControllerAnimated:NO];
     [self checkDislike];
+}
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    TransitionAnimator *animator = [[TransitionAnimator alloc] init];
+    animator.presenting = YES;
+    return animator;
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    TransitionAnimator *animator = [[TransitionAnimator alloc] init];
+    return animator;
 }
 
 @end

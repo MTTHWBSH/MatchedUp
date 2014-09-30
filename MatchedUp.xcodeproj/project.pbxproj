@@ -169,6 +169,7 @@
 		76A03CC719D0935400EEEE55 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A03CC619D0935400EEEE55 /* EditProfileViewController.m */; };
 		76A03CCB19D094D100EEEE55 /* ProfileViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A03CCA19D094D100EEEE55 /* ProfileViewViewController.m */; };
 		76B5F04519D8A95700D00F30 /* defaultPrefsFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B5F04419D8A95700D00F30 /* defaultPrefsFile.plist */; };
+		76B5F04919DA3CB000D00F30 /* TransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B5F04819DA3CB000D00F30 /* TransitionAnimator.m */; };
 		C75CD3DFDFEA4AC48791A04F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F97FDEA7140158AE39458 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -343,7 +344,6 @@
 		4D85993B19C8F13300FCF80D /* MatchedUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchedUpTests.m; sourceTree = "<group>"; };
 		4D85994519C8F1CB00FCF80D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4D85994619C8F1CB00FCF80D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		4D85994919C8F4F000FCF80D /* MatchedUp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MatchedUp-Prefix.pch"; sourceTree = "<group>"; };
 		766CEA4C19D7868D00F23252 /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
 		766CEA4D19D7868D00F23252 /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		766CEA5019D789F400F23252 /* MatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
@@ -361,6 +361,9 @@
 		76A03CC919D094D100EEEE55 /* ProfileViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewViewController.h; sourceTree = "<group>"; };
 		76A03CCA19D094D100EEEE55 /* ProfileViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewViewController.m; sourceTree = "<group>"; };
 		76B5F04419D8A95700D00F30 /* defaultPrefsFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaultPrefsFile.plist; sourceTree = "<group>"; };
+		76B5F04719DA3CB000D00F30 /* TransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimator.h; sourceTree = "<group>"; };
+		76B5F04819DA3CB000D00F30 /* TransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimator.m; sourceTree = "<group>"; };
+		76B5F04A19DA41DE00D00F30 /* MatchedUp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MatchedUp-Prefix.pch"; sourceTree = "<group>"; };
 		7EEA55FA4AE64BDBAFC20B34 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		AB6F97FDEA7140158AE39458 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -706,7 +709,7 @@
 				4D23B89319D9CE5A00430DDF /* Matched_Up_assets */,
 				76A03CB919CE2E8E00EEEE55 /* Constants.h */,
 				76A03CBA19CE2E8E00EEEE55 /* Constants.m */,
-				4D85994919C8F4F000FCF80D /* MatchedUp-Prefix.pch */,
+				76B5F04A19DA41DE00D00F30 /* MatchedUp-Prefix.pch */,
 				4D85991D19C8F13300FCF80D /* Info.plist */,
 				4D85991E19C8F13300FCF80D /* main.m */,
 			);
@@ -750,6 +753,7 @@
 		766CEA4B19D7867400F23252 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				76B5F04619DA3C9600D00F30 /* Transition Helper */,
 				766CEA4C19D7868D00F23252 /* MatchViewController.h */,
 				766CEA4D19D7868D00F23252 /* MatchViewController.m */,
 			);
@@ -809,6 +813,15 @@
 				76A03CCA19D094D100EEEE55 /* ProfileViewViewController.m */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		76B5F04619DA3C9600D00F30 /* Transition Helper */ = {
+			isa = PBXGroup;
+			children = (
+				76B5F04719DA3CB000D00F30 /* TransitionAnimator.h */,
+				76B5F04819DA3CB000D00F30 /* TransitionAnimator.m */,
+			);
+			name = "Transition Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1095,6 +1108,7 @@
 				4D85994719C8F1CB00FCF80D /* LoginViewController.m in Sources */,
 				766CEA5219D789F400F23252 /* MatchesViewController.m in Sources */,
 				766CEA5919D78B8600F23252 /* ChatViewController.m in Sources */,
+				76B5F04919DA3CB000D00F30 /* TransitionAnimator.m in Sources */,
 				76A03CCB19D094D100EEEE55 /* ProfileViewViewController.m in Sources */,
 				4D85992219C8F13300FCF80D /* AppDelegate.m in Sources */,
 				76A03CC719D0935400EEEE55 /* EditProfileViewController.m in Sources */,

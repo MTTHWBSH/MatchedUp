@@ -2,3 +2,4 @@ platform :ios, '7.0'
 
 pod 'Parse', '1.2.16'
 pod 'JSMessagesViewController', git: "https://github.com/jessesquires/JSQMessagesViewController.git", tag: '3.4.0'
+pod 'Mixpanel'
